@@ -1,0 +1,25 @@
+{
+  "name": "prodigy_wd_04",
+  "version": "1.0.0",
+  "description": "Modern, responsive, and accessible Personal Developer Portfolio for Husam Abdulraheem built for Prodigy InfoTech Web Development Internship Task-04.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/**/*.test.js",
+    "lint": "node ./scripts/lint.js",
+    "build": "node ./scripts/build-check.js",
+    "check": "npm run test && npm run lint && npm run build"
+  },
+  "keywords": [
+    "portfolio",
+    "personal-website",
+    "web-developer",
+    "javascript",
+    "html5",
+    "css3",
+    "accessibility",
+    "dark-mode",
+    "prodigy-infotech"
+  ],
+  "author": "Husam Abdulraheem <ht93297@gmail.com>",
+  "license": "MIT"
+}

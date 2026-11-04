@@ -1,0 +1,186 @@
+/**
+ * Base Resets, Accessible Layout & Neo-Brutalist Foundations
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bg-canvas);
+  background-image: radial-gradient(var(--grid-pattern-color) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  overflow-x: hidden;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+  position: relative;
+}
+
+/* Ambient Top Accent Line */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--brand-primary);
+  z-index: 1000;
+}
+
+/* Accessible Skip Navigation Link - Brutalist Badge */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1.5rem;
+  padding: 0.75rem 1.25rem;
+  background: var(--brand-primary);
+  color: #000000;
+  font-family: var(--font-mono);
+  font-weight: 800;
+  border: var(--border-width) solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  border-radius: var(--radius-sm);
+  z-index: 1001;
+  transition: top var(--transition-fast);
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 1.5rem;
+  outline: 3px solid var(--border-focus);
+}
+
+/* High Contrast Brutalist Selection */
+::selection {
+  background: var(--color-yellow);
+  color: #000000;
+}
+
+/* Brutalist Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-canvas);
+  border-left: 2px solid var(--border-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border: 2px solid var(--bg-canvas);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-yellow);
+}
+
+/* Focus Visible */
+:focus-visible {
+  outline: 3px solid var(--border-focus);
+  outline-offset: 3px;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+  position: relative;
+  z-index: 1;
+}
+
+/* Section Wrapper */
+.section {
+  padding: var(--space-4xl) 0;
+  position: relative;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto var(--space-3xl) auto;
+}
+
+.section-subtitle {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: var(--color-yellow);
+  color: #000000;
+  padding: 0.25rem 0.75rem;
+  border: var(--border-width) solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-md);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 4vw, 3.25rem);
+  font-weight: 900;
+  line-height: 1.15;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-md);
+  text-transform: uppercase;
+}
+
+.section-description {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* Typography Helpers */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  color: var(--text-primary);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+p {
+  color: var(--text-secondary);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Brutalist Gradient/Punchy Text */
+.text-gradient {
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+}

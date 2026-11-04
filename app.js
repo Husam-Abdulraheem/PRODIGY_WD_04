@@ -119,7 +119,7 @@ function initTypewriter() {
 
     if (isDeleting) {
       charIdx--;
-      target.textContent = fullText.substring(0, charIdx);
+      target.textContent = charIdx === 0 ? '\u00A0' : fullText.substring(0, charIdx);
     } else {
       charIdx++;
       target.textContent = fullText.substring(0, charIdx);

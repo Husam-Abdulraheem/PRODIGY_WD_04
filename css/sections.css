@@ -130,24 +130,43 @@
 
 .hero-title {
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 5.2vw, 4.25rem);
+  font-size: clamp(2.2rem, 4.8vw, 3.8rem);
   font-weight: 900;
   letter-spacing: -0.03em;
-  line-height: 1.1;
+  line-height: 1.15;
   color: var(--text-primary);
   text-transform: uppercase;
 }
 
+.hero-greeting {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.typewriter-line {
+  display: flex;
+  align-items: center;
+  /* Lock vertical height to prevent any layout shifts as text types or erases */
+  min-height: clamp(2.75rem, 5vw, 3.8rem);
+  width: 100%;
+}
+
 .typewriter-wrap {
-  display: inline-block;
-  min-height: 1.25em;
+  display: inline-flex;
+  align-items: center;
+  /* Pre-allocate width so container size remains stable */
+  min-width: min(100%, 28ch);
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
   background: var(--color-yellow);
   color: #000000;
-  padding: 0.1em 0.35em;
+  padding: 0.25rem 0.65rem;
   border: var(--border-width) solid var(--border-color);
   box-shadow: 4px 4px 0px var(--border-color);
   border-radius: var(--radius-sm);
-  margin-top: 0.35rem;
+  font-size: clamp(1.15rem, 2.5vw, 2rem);
+  line-height: 1.2;
 }
 
 .typewriter-text {
@@ -155,13 +174,18 @@
   font-family: var(--font-mono);
   font-weight: 900;
   text-transform: uppercase;
+  letter-spacing: -0.01em;
+  display: inline-block;
+  white-space: nowrap;
 }
 
 .typewriter-cursor {
   display: inline-block;
   width: 4px;
+  height: 1.15em;
   background-color: #000000;
-  margin-left: 2px;
+  margin-left: 3px;
+  flex-shrink: 0;
   animation: blink-cursor 0.8s infinite;
 }
 

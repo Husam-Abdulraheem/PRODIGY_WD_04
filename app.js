@@ -440,8 +440,8 @@ function openProjectModal(project) {
 
   modalContent.innerHTML = `
     <div style="margin-bottom: 1.25rem;">
-      <span class="badge" style="margin-bottom: 0.5rem;">${project.category.toUpperCase()}</span>
-      <h2 style="font-size: 1.75rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.5rem;">${project.title}</h2>
+      <span class="badge" style="margin-bottom: 0.5rem; background: var(--color-yellow); color: #000;">[ ${project.category.toUpperCase()} ]</span>
+      <h2 style="font-size: 1.75rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.5rem; text-transform: uppercase;">${project.title}</h2>
       <div class="project-badges" style="margin-top: 0.5rem;">
         ${project.badges.map(b => `<span class="badge">${b}</span>`).join('')}
       </div>
@@ -452,9 +452,9 @@ function openProjectModal(project) {
     </div>
 
     ${project.metrics && project.metrics.length ? `
-      <div style="margin-bottom: 1.5rem; background: var(--bg-surface-elevated); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
-        <strong style="color: var(--text-primary); display: block; margin-bottom: 0.5rem;">Key Engineering Highlights:</strong>
-        <ul style="list-style: disc; margin-left: 1.25rem; color: var(--text-secondary); font-size: 0.9375rem;">
+      <div style="margin-bottom: 1.5rem; background: var(--bg-surface-elevated); padding: 1rem; border-radius: var(--radius-sm); border: var(--border-width) solid var(--border-color); box-shadow: var(--shadow-sm);">
+        <strong style="color: var(--text-primary); display: block; margin-bottom: 0.5rem; font-family: var(--font-display); text-transform: uppercase;">// Key Engineering Highlights:</strong>
+        <ul style="list-style: square; margin-left: 1.25rem; color: var(--text-secondary); font-size: 0.9375rem; font-family: var(--font-mono);">
           ${project.metrics.map(m => `<li>${m}</li>`).join('')}
         </ul>
       </div>

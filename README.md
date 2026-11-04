@@ -43,10 +43,12 @@ A modern, responsive, accessible, and high-performance **Personal Developer Port
 - **One-Click Email Copy**: Integrated clipboard copy button with animated toast notifications.
 - **Validated Contact Form**: Real-time client-side validation (name, email regex, subject, and length bounds) with dynamic character counter (up to 1500 chars) and automated mailto client launcher.
 
-### 7. Modern Visual Design & Accessibility (a11y)
-- **Dark & Light Mode**: Smooth theme toggle with persistent `localStorage` memory and OS `prefers-color-scheme` fallback.
-- **Glassmorphism**: Backdrop blur overlays with subtle glowing borders and radial lighting.
-- **Accessibility**: Full semantic HTML5 structure, skip navigation link, focus-visible outlines, ARIA landmarks, and high-contrast color ratios.
+### 7. Bold Neo-Brutalism Visual Design & Accessibility (a11y)
+- **Signature Neo-Brutalist Aesthetic**: Thick solid borders (`2.5px - 3.5px solid`), zero-blur hard drop shadows (`4px 4px 0px`, `6px 6px 0px`, `8px 8px 0px`), and tactile mechanical button press feedback (`translate(2px, 2px)`).
+- **Vibrant Accent Palette**: High-contrast Canary Yellow (`#FFE600`), Cyber Cyan (`#00F0FF`), Neon Lime (`#22C55E`), and Hot Coral (`#FF5376`).
+- **Typography & Details**: Space Grotesk display headings, JetBrains Mono code tags, animated infinite marquee ticker strip, and sticker-style rotated badges.
+- **Dual Neo-Brutalist Themes**: Dark Brutalism (deep obsidian canvas with neon hard shadows) and Light Neo-Brutalism (warm paper canvas with bold black borders and hard drop shadows) with persistent `localStorage` sync.
+- **Accessibility**: Full semantic HTML5 structure, skip navigation link, focus-visible outlines, ARIA landmarks, and WCAG AA contrast.
 - **Zero External Dependencies**: Pure vanilla JavaScript (ES6+ modules), semantic HTML5, and modular CSS variables.
 
 ---

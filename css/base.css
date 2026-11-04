@@ -1,5 +1,5 @@
 /**
- * Base Resets, Accessible Layout, Typography & Ambience
+ * Base Resets, Accessible Layout & Neo-Brutalist Foundations
  */
 
 *,
@@ -19,38 +19,42 @@ html {
 body {
   min-height: 100vh;
   background-color: var(--bg-canvas);
+  background-image: radial-gradient(var(--grid-pattern-color) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
   color: var(--text-primary);
   font-family: var(--font-sans);
   line-height: 1.6;
   overflow-x: hidden;
-  transition: background-color var(--transition-normal), color var(--transition-normal);
+  transition: background-color var(--transition-fast), color var(--transition-fast);
   position: relative;
 }
 
-/* Ambient Background Canvas Effect */
+/* Ambient Top Accent Line */
 body::before {
   content: '';
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: 100vh;
-  background: var(--gradient-hero);
-  pointer-events: none;
-  z-index: 0;
+  height: 4px;
+  background: var(--brand-primary);
+  z-index: 1000;
 }
 
-/* Accessible Skip Navigation Link */
+/* Accessible Skip Navigation Link - Brutalist Badge */
 .skip-link {
   position: absolute;
   top: -100px;
   left: 1.5rem;
   padding: 0.75rem 1.25rem;
   background: var(--brand-primary);
-  color: #ffffff;
-  font-weight: 600;
-  border-radius: var(--radius-md);
-  z-index: 1000;
+  color: #000000;
+  font-family: var(--font-mono);
+  font-weight: 800;
+  border: var(--border-width) solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  border-radius: var(--radius-sm);
+  z-index: 1001;
   transition: top var(--transition-fast);
   text-decoration: none;
 }
@@ -60,33 +64,34 @@ body::before {
   outline: 3px solid var(--border-focus);
 }
 
-/* Selection */
+/* High Contrast Brutalist Selection */
 ::selection {
-  background: rgba(59, 130, 246, 0.3);
-  color: inherit;
+  background: var(--color-yellow);
+  color: #000000;
 }
 
-/* Scrollbar */
+/* Brutalist Scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 12px;
 }
 
 ::-webkit-scrollbar-track {
   background: var(--bg-canvas);
+  border-left: 2px solid var(--border-color);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--border-medium);
-  border-radius: var(--radius-full);
+  background: var(--border-color);
+  border: 2px solid var(--bg-canvas);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--brand-primary);
+  background: var(--color-yellow);
 }
 
 /* Focus Visible */
 :focus-visible {
-  outline: 2px solid var(--border-focus);
+  outline: 3px solid var(--border-focus);
   outline-offset: 3px;
 }
 
@@ -110,30 +115,35 @@ body::before {
 
 .section-header {
   text-align: center;
-  max-width: 680px;
+  max-width: 720px;
   margin: 0 auto var(--space-3xl) auto;
 }
 
 .section-subtitle {
   display: inline-block;
+  font-family: var(--font-mono);
   font-size: 0.875rem;
-  font-weight: 700;
+  font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  background: var(--gradient-accent);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: var(--space-sm);
+  letter-spacing: 0.08em;
+  background: var(--color-yellow);
+  color: #000000;
+  padding: 0.25rem 0.75rem;
+  border: var(--border-width) solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-md);
 }
 
 .section-title {
-  font-size: clamp(2rem, 3.5vw, 2.75rem);
-  font-weight: 800;
-  line-height: 1.2;
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 4vw, 3.25rem);
+  font-weight: 900;
+  line-height: 1.15;
   color: var(--text-primary);
   letter-spacing: -0.02em;
   margin-bottom: var(--space-md);
+  text-transform: uppercase;
 }
 
 .section-description {
@@ -144,9 +154,10 @@ body::before {
 
 /* Typography Helpers */
 h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
   color: var(--text-primary);
-  font-weight: 700;
-  line-height: 1.3;
+  font-weight: 800;
+  line-height: 1.2;
 }
 
 p {
@@ -154,13 +165,9 @@ p {
 }
 
 a {
-  color: var(--brand-primary);
+  color: inherit;
   text-decoration: none;
-  transition: color var(--transition-fast);
-}
-
-a:hover {
-  color: var(--brand-primary-hover);
+  transition: all var(--transition-fast);
 }
 
 img {
@@ -169,10 +176,11 @@ img {
   display: block;
 }
 
-/* Gradient Text */
+/* Brutalist Gradient/Punchy Text */
 .text-gradient {
   background: var(--gradient-accent);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-weight: 900;
 }

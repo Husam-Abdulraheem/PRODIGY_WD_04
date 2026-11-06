@@ -1,6 +1,8 @@
 # Prodigy InfoTech — Web Development Internship
 ## Task 04: Personal Developer Portfolio Website
 
+[![Live Demo](https://img.shields.io/badge/Live_Demo-GitHub_Pages-2ea44f?style=for-the-badge&logo=github)](https://husam-abdulraheem.github.io/PRODIGY_WD_04/)
+[![Deploy to GitHub Pages](https://github.com/Husam-Abdulraheem/PRODIGY_WD_04/actions/workflows/deploy.yml/badge.svg)](https://github.com/Husam-Abdulraheem/PRODIGY_WD_04/actions/workflows/deploy.yml)
 ![Prodigy InfoTech Task-04](https://img.shields.io/badge/PRODIGY__WD__04-Task--04-6366f1?style=for-the-badge&logo=target)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
@@ -8,6 +10,8 @@
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
 A modern, responsive, accessible, and high-performance **Personal Developer Portfolio Website** designed and built for **Husam Abdulraheem** as part of the **Prodigy InfoTech Web Development Internship (Task-04)**.
+
+🌐 **Live URL**: [https://husam-abdulraheem.github.io/PRODIGY_WD_04/](https://husam-abdulraheem.github.io/PRODIGY_WD_04/)
 
 ---
 
